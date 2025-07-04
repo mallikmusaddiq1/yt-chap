@@ -15,7 +15,7 @@ def seconds_to_hms(seconds):
     return f"{h:02}:{m:02}:{s:02}"
 
 def print_chapters(chapters, url):
-    print(f"\nChapters from: {url}\n")
+    print(f"Chapters from: {url}\n")
     print(f"{'No.':<3} | {'Start':<8} | {'End':<8} | {'Duration':<8} | Title")
     print("-" * 70)
 
