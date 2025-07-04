@@ -3,7 +3,7 @@ import subprocess
 import ast
 import sys
 
-__version__ = "0.1.0"
+__version__ = "1.0.0"
 __author__ = "Mallik Mohammad Musaddiq"
 __email__ = "mallikmusaddiq1@gmail.com"
 __github__ = "https://github.com/mallikmusaddiq1/yt-chap"
