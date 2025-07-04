@@ -20,6 +20,9 @@ setup(
         "Operating System :: OS Independent",
     ],
     python_requires=">=3.6",
+    install_requires=[
+        "yt-dlp",  # ✅ Automatically fetches latest compatible yt-dlp
+    ],
     entry_points={
         "console_scripts": [
             "yt-chap = yt_chap.cli:main",
