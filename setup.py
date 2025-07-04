@@ -13,9 +13,7 @@ setup(
             "yt-chap=yt_chap.cli:main"
         ]
     },
-    install_requires=[
-        yt-dlp,
-    ],
+    install_requires=[],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
