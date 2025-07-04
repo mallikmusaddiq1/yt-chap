@@ -3,7 +3,7 @@ import subprocess
 import ast
 import sys
 
-__version__ = "1.0.0"
+__version__ = "0.1.0"
 __author__ = "Mallik Mohammad Musaddiq"
 __email__ = "mallikmusaddiq1@gmail.com"
 __github__ = "https://github.com/mallikmusaddiq1/yt-chap"
@@ -45,9 +45,9 @@ def fallback_single_chapter(url):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="yt-chap - View YouTube video chapters in human-readable format"
+        description="yt-chap - View Youtube video chapters in human-readable format"
     )
-    parser.add_argument("url", nargs="?", help="YouTube video URL")
+    parser.add_argument("url", nargs="?", help="YouTube Video URL")
     parser.add_argument("--version", "-v", action="store_true", help="Show version and author info")
     args = parser.parse_args()
 
