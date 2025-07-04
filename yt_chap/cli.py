@@ -28,7 +28,7 @@ def print_chapters(chapters, url):
         print(f"{i:<3} | {start:<8} | {end:<8} | {duration:<8} | {title}")
 
 def fallback_single_chapter(url):
-    print("\nNo chapter metadata found. Showing entire video as a single block...\n")
+    print("No chapter metadata found. Showing entire video as a single block...\n")
     result = subprocess.run(['yt-dlp', '--print', 'duration', url], capture_output=True, text=True)
     try:
         duration = float(result.stdout.strip())
