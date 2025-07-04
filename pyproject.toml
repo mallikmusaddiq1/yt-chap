@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yt-chap"
+version = "0.1.0"
+description = "CLI tool to view YouTube video chapters"
+readme = "README.md"
+requires-python = ">=3.6"
+license = {text = "MIT"}
+authors = [
+    { name="Mallik Mohammad Musaddiq", email="mallikmusaddiq1@gmail.com" }
+]
+dependencies = [
+    "yt-dlp",
+    "rich"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/mallikmusaddiq1/yt-chap"
+
+[project.scripts]
+yt-chap = "yt_chap.cli:main"
