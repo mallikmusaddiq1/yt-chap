@@ -1,4 +1,4 @@
-# yt-chap
+# YT-CHAP
 
 **yt-chap** is a simple CLI tool to view YouTube video chapters in a clean, human-readable format.
 
