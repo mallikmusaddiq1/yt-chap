@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="yt-chap",
-    version="0.1.0",
+    version="0.2.0",
     description="CLI tool to display YouTube chapters using yt-dlp",
     author="Mallik Mohammad Musaddiq",
     author_email="mallikmusaddiq1@gmail.com",
