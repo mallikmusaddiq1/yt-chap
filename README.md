@@ -117,4 +117,4 @@ Use `metadata.txt` with FFmpeg to embed chapter data into a video.
 ## 📜 License
 
 Licensed under the **MIT License**.
-See the [LICENSE](https://github.com/mallikmusaddiq1/yt-chap/blob/main/LICENSE) file for details.
+See the [LICENSE](https://github.com/mallikmusaddiq1/yt-chap/blob/master/LICENSE) file for details.
