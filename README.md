@@ -110,7 +110,7 @@ Use `metadata.txt` with FFmpeg to embed chapter data into a video.
 
 **Email:** [mallikmusaddiq1@gmail.com](mailto:mallikmusaddiq1@gmail.com)
 
-"*GitHub:** [mallikmusaddiq1/yt-chap](https://github.com/mallikmusaddiq1/yt-chap)
+**GitHub:** [mallikmusaddiq1/yt-chap](https://github.com/mallikmusaddiq1/yt-chap)
 
 ---
 
