@@ -1,78 +1,120 @@
 # YT-CHAP
 
-**yt-chap** is a simple CLI tool to fetch and display video chapters from **any URL supported by yt-dlp** in a clean, human-readable format.
+**yt-chap** is a clean and efficient command-line tool written in Python to fetch and display video chapters from **any URL supported by yt-dlp** — including YouTube, BiliBili, and Vimeo.
+
+[![GitHub Stars](https://img.shields.io/github/stars/mallikmusaddiq1/yt-chap?style=social)](https://github.com/mallikmusaddiq1/yt-chap)
+[![PyPI](https://img.shields.io/pypi/v/yt-chap)](https://pypi.org/project/yt-chap/)
+[![Downloads](https://img.shields.io/badge/Downloads-N%2FA-lightgrey)](https://pypi.org/project/yt-chap/)
+[![License](https://img.shields.io/github/license/mallikmusaddiq1/yt-chap)](https://github.com/mallikmusaddiq1/yt-chap/blob/main/LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.6%2B-blue)](https://www.python.org/)
 
 ---
 
 ## 🚀 Features
 
--   Parses video chapter metadata using `yt-dlp`.
--   Displays output in a clear table format (Start, End, Duration, Title).
--   Gracefully falls back to a single "Full Video" entry if no chapters are found.
--   Checks for `yt-dlp` installation and provides guidance if not found.
--   Lightweight and terminal-friendly.
--   Includes `--version` / `-v` flag for author and version info.
+* **Multi-Format Output:** Three exclusive formats available — specify one:
+
+  1. **Human-Readable Table** (`-t`, `--table`)
+  2. **JSON** (`-j`, `--json`) for automation or integration.
+  3. **FFmpeg Metadata** (`-f`, `--ffmpeg-metadata`) for embedding chapters into videos.
+* Extracts video chapter metadata using `yt-dlp`.
+* Precise timestamp formatting: `HH:MM:SS.mmm`.
+* Graceful fallback if no chapters exist — creates a single *Full Video* entry.
+* Checks for `yt-dlp` installation automatically and provides clear setup guidance.
+* Quiet mode (`-q`) to suppress informational logs.
 
 ---
 
 ## 📦 Installation
 
-1.  **Install `yt-dlp`**:
-    `yt-chap` relies on `yt-dlp` to fetch video information. If you don't have it installed, please follow the official installation instructions:
-    [yt-dlp Installation Guide](https://github.com/yt-dlp/yt-dlp#installation)
+`yt-chap` depends on **Python 3.6+** and **yt-dlp**.
 
-    For example, using `pip`:
-    ```bash
-    pip install yt-dlp
-    ```
+### 1️⃣ Install yt-dlp
 
-2.  **Install `yt-chap`**:
-    You can install `yt-chap` from its source directory:
-    ```bash
-    git clone [https://github.com/mallikmusaddiq1/yt-chap.git](https://github.com/mallikmusaddiq1/yt-chap.git)
-    cd yt-chap
-    pip install .
-    ```
-
----
-
-## 📄 Usage
-
-Run `yt-chap` followed by the video URL you want to inspect:
+Ensure `yt-dlp` is installed and accessible via PATH.
 
 ```bash
-yt-chap <VIDEO_URL>
+pip install yt-dlp
+```
 
-Example:
-yt-chap https://www.youtube.com/watch?v=xyz
+*For alternative methods, visit the [yt-dlp documentation](https://github.com/yt-dlp/yt-dlp#installation).*
 
-Example Output:
+### 2️⃣ Install yt-chap (From Source)
 
-No.  | Start      | End        | Duration   | Title
------|------------|------------|------------|---------------------------------------------
-1    | 00:00:00   | 00:00:30   | 00:00:30   | Opening Scene
-2    | 00:00:30   | 00:01:15   | 00:00:45   | Main Theme
-3    | 00:01:15   | 00:02:00   | 00:00:45   | Bridge
-4    | 00:02:00   | 00:03:30   | 00:01:30   | Conclusion
-
-To view version and author info:
-yt-chap --version
+```bash
+git clone https://github.com/mallikmusaddiq1/yt-chap.git
+cd yt-chap
+pip install .
 ```
 
 ---
 
-🔧 Requirements
- * Python 3.6+
- * yt-dlp (must be installed separately and accessible in your system's PATH)
+## ⚙️ Usage
+
+`yt-chap` requires a valid video URL and **one** format flag (`-t`, `-j`, or `-f`).
+
+### 🧾 Table Output
+
+```bash
+yt-chap -t <VIDEO_URL>
+```
+
+**Example:**
+
+```
+[info] Chapters from: https://www.youtube.com/watch?v=xyz
+
+No.  | Start         | End           | Duration      | Title
+---------------------------------------------------------------
+1    | 00:00:00.000  | 00:00:30.500  | 00:00:30.500  | Opening Scene
+2    | 00:00:30.500  | 00:01:15.000  | 00:00:44.500  | Main Theme
+3    | 00:01:15.000  | 00:02:00.000  | 00:00:45.000  | Bridge
+4    | 00:02:00.000  | 00:03:30.000  | 00:01:30.000  | Conclusion
+```
+
+### 💡 JSON Output
+
+```bash
+yt-chap -j <VIDEO_URL>
+```
+
+Perfect for integration with scripts, web tools, or APIs.
+
+### 🎬 FFmpeg Metadata Output
+
+```bash
+yt-chap -f <VIDEO_URL> > metadata.txt
+```
+
+Use `metadata.txt` with FFmpeg to embed chapter data into a video.
+
+### 🧰 Options
+
+| Flag | Long Form   | Description                             |
+| ---- | ----------- | --------------------------------------- |
+| `-q` | `--quiet`   | Suppress info messages and logs         |
+| `-v` | `--version` | Show version and author info (`v0.3.0`) |
 
 ---
 
-👤 Author
-Mallik Mohammad Musaddiq
-GitHub: mallikmusaddiq1/yt-chap
-Email: mallikmusaddiq1@gmail.com
+## 🔧 Requirements
+
+* Python 3.6+
+* yt-dlp
 
 ---
 
-📜 License
-MIT License — see [LICENSE](LICENSE) file.
+## 👤 Author
+
+**Name:** Mallik Mohammad Musaddiq**
+
+**Email:** [mallikmusaddiq1@gmail.com](mailto:mallikmusaddiq1@gmail.com)
+
+"*GitHub:** [mallikmusaddiq1/yt-chap](https://github.com/mallikmusaddiq1/yt-chap)
+
+---
+
+## 📜 License
+
+Licensed under the **MIT License**.
+See the [LICENSE](https://github.com/mallikmusaddiq1/yt-chap/blob/main/LICENSE) file for details.
