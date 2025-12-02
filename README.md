@@ -4,7 +4,7 @@
 
 [![GitHub Stars](https://img.shields.io/github/stars/mallikmusaddiq1/yt-chap?style=social)](https://github.com/mallikmusaddiq1/yt-chap)
 [![PyPI](https://img.shields.io/pypi/v/yt-chap)](https://pypi.org/project/yt-chap/)
-[![Downloads](https://img.shields.io/badge/Downloads-N%2FA-lightgrey)](https://pypi.org/project/yt-chap/)
+[![Downloads](https://static.pepy.tech/badge/yt-chap/month)](https://pepy.tech/project/yt-chap)
 [![License](https://img.shields.io/github/license/mallikmusaddiq1/yt-chap)](https://github.com/mallikmusaddiq1/yt-chap/blob/main/LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.6%2B-blue)](https://www.python.org/)
 
